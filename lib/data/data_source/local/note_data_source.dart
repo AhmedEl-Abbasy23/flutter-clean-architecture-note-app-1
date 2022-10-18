@@ -30,6 +30,7 @@ class NoteDataSource {
 
   Future<void> updateNote(Note note) async {
     await db.update('note', note.toJson());
+    // you should select specific note by "note id".
   }
 
   Future<void> deleteNote(Note note) async {
